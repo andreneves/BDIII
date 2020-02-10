@@ -1,7 +1,3 @@
-# BDIII
-Banco de dados III
-
-
 Documentacao agil
 
 GITLAB
