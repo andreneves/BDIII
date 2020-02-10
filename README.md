@@ -1,13 +1,13 @@
 # BDIII
 Banco de dados III
 
-# BDIII00
+## BDIII00
 SGBD: www.mysql.com
 XAMPP
 workbench
 documentação
 
-# BDIIA01
+## BDIIA01
 CREATE DATABASE
 CREATE TABLE
 
@@ -19,7 +19,7 @@ IS NULL e IS NOT NULL
 DISTINCT
 ORDER BY
 
-# BDIIA02
+## BDIIA02
 
 
 

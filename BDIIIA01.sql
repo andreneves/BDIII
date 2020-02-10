@@ -1,4 +1,4 @@
-BDIIA01
+-- BDIIA01
 
 -- create database
 CREATE DATABASE bd3;
