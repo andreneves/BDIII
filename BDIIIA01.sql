@@ -29,3 +29,4 @@ select distinct nome from alunos;
 
 -- order by
 select * from alunos order by nome asc;
+
