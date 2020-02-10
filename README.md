@@ -1,18 +1,16 @@
 # BDIII
 Banco de dados III
 
-----------------
-
-www.mysql.com
+# BDIII00
+SGBD: www.mysql.com
 XAMPP
 workbench
 documentação
 
-Revisão
+# BDIIA01
 CREATE DATABASE
 CREATE TABLE
 
-A01
 INSERT INTO
 SELECT
 SELECT DISTINCT
@@ -20,6 +18,8 @@ WHERE
 IS NULL e IS NOT NULL
 DISTINCT
 ORDER BY
+
+# BDIIA02
 
 
 

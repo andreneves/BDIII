@@ -1,3 +1,5 @@
+BDIIA01
+
 -- create database
 CREATE DATABASE bd3;
 
