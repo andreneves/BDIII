@@ -14,3 +14,4 @@ select nome, idade from alunos WHERE idade IS NULL;
 
 select nome, idade from alunos WHERE idade IS NOT NULL; 
 
+select distinct nome from alunos
