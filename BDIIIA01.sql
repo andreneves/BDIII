@@ -10,6 +10,12 @@ CREATE TABLE alunos (
 	idade int (3)
 );
 
+|**Column Name**|**Data Type**|**Others**|
+|-|-|-|
+|id|integer|auto increment, primary key|
+|name|varchar(16)|-|
+|team|integer|foreign key(team)|
+
 -- insert
 insert into alunos (nome, idade) values ('joao', null);
 
