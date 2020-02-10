@@ -1,55 +1,30 @@
 # BDIII
 Banco de dados III
 
-
-Documentacao agil
-
-GITLAB
-
-Boas praticas de programacao
-
-BD1  tudo sobre banco, etc. modelagem, etc.
-XAMPP - MYSQL
-
--------
-- BD3 -
--------
-
-Relação entre tabelas - joins
-Insert
-Funcoes - count avg, etc.
-ALIAS
-BEETWEEN
-LIKE
-UNION
-ORDER BY
-DEFALT
--- ENUN
-DISTINCT
-HAVING
-WHERE
-
 ----------------
+
 www.mysql.com
 XAMPP
 workbench
 documentação
 
-
-CREATE DATABASE bd3;
-
+Revisão
+CREATE DATABASE
 CREATE TABLE
 
-INSERT INTO *
+A01
+INSERT INTO
+SELECT
+SELECT DISTINCT
+WHERE
+IS NULL e IS NOT NULL
+DISTINCT
+ORDER BY
 
-SELECT *
-SELECT DISTINCT *
-WHERE * 
 
 
 
 AND OR NOT
-ORDER BY *
 NULL VALUES
 UPDATE
 DELETE
