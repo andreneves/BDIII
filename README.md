@@ -12,21 +12,21 @@ workbench
 documentação
 
 ## BDIIIA01
-CREATE DATABASE
-CREATE TABLE
+* CREATE DATABASE
+* CREATE TABLE
 
-INSERT INTO
-SELECT
-SELECT DISTINCT
-WHERE
-IS NULL e IS NOT NULL
-DISTINCT
-ORDER BY
+* INSERT INTO
+* SELECT
+* SELECT DISTINCT
+* WHERE
+* IS NULL e IS NOT NULL
+* DISTINCT
+* ORDER BY
 
 ```sql
-$ select * from alunos
-$ where
-$ idade = 10
+select * from alunos
+where
+idade = 10
 ```
 
 ## BDIIIA02
