@@ -6,7 +6,8 @@ One to two paragraph statement about your product and what it does.
 
 
 ## BDIII00
-SGBD: www.mysql.com
+SGBD: https://www.mysql.com/
+MySQL :: MySQL 8.0 Reference Manual: https://dev.mysql.com/doc/refman/8.0/en/
 XAMPP
 workbench
 documentação
