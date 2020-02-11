@@ -23,7 +23,7 @@ IS NULL e IS NOT NULL
 DISTINCT
 ORDER BY
 
-```sh
+```sql
 $ select * from alunos
 $ where
 $ idade = 10
