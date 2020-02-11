@@ -23,6 +23,12 @@ IS NULL e IS NOT NULL
 DISTINCT
 ORDER BY
 
+```sh
+$ select * from alunos
+$ where
+$ idade = 10
+```
+
 ## BDIIIA02
 
 
