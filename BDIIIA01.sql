@@ -15,6 +15,7 @@ insert into alunos (nome, idade) values ('leo', 10);
 insert into alunos (nome, idade) values ('juju', 11);
 insert into alunos (nome, idade) values ('fred', 13);
 insert into alunos (nome, idade) values ('joao', null);
+insert into alunos (nome, idade) values ('joao', 14);
 
 -- select
 select * from alunos;
