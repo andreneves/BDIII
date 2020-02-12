@@ -23,6 +23,7 @@ documentação
 * IS NULL e IS NOT NULL
 * DISTINCT
 * ORDER BY
+* LIMIT
 
 ```sql
 select * from alunos
@@ -32,10 +33,12 @@ idade = 10
 
 ## BDIIIA02
 
-AND OR NOT
-NULL VALUES
 UPDATE
 DELETE
+
+
+AND OR NOT
+NULL VALUES
 
 SELECT TOP
 
