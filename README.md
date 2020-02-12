@@ -32,9 +32,6 @@ idade = 10
 
 ## BDIIIA02
 
-
-
-
 AND OR NOT
 NULL VALUES
 UPDATE
