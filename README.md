@@ -25,14 +25,7 @@ documentação
 * ORDER BY
 * LIMIT
 
-```sql
-select * from alunos
-where
-idade = 10
-```
-
 ## BDIIIA02
-
 UPDATE
 DELETE
 AND
@@ -41,14 +34,20 @@ NOT
 
 
 ## BDIIIA02
-NULL VALUES
+COUNT
+AVG
+SUM
+LIKE
+
+
+
+
+
 
 SELECT TOP
 
 MIN e MAX
 
-COUNT AVG SUM *
-LIKE *
 WILDCARDS - coringas *
 
 IN / NOT IN
