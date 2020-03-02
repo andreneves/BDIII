@@ -38,8 +38,11 @@ COUNT
 AVG
 SUM
 LIKE
+WILDCARDS - coringas *
 
-
+## BDIIIA03
+BETWEEN
+ALIAS
 
 
 
@@ -48,11 +51,10 @@ SELECT TOP
 
 MIN e MAX
 
-WILDCARDS - coringas *
+
 
 IN / NOT IN
-Between *
-ALIAS *
+
 JOINS *
 INNER JOIN
 LEFT JOIN
