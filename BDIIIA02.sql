@@ -1,5 +1,11 @@
 -- BDIIA02
 
+DROP DATABASE bd3;
+CREATE DATABASE bd3;
+
+USE bd3;
+DROP TABLE alunos;
+
 -- create table
 CREATE TABLE alunos (
 	id INT AUTO_INCREMENT primary key,

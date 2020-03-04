@@ -1,5 +1,11 @@
 -- BDIIA04
 
+DROP DATABASE bd3;
+CREATE DATABASE bd3;
+
+USE bd3;
+DROP TABLE alunos;
+
 -- create table
 CREATE TABLE alunos (
 	id INT AUTO_INCREMENT primary key,
@@ -14,7 +20,6 @@ insert into alunos (nome, idade, nascimento) values ('juju', 11, '2009-10-08');
 insert into alunos (nome, idade, nascimento) values ('fred', 13, '2007-05-12');
 insert into alunos (nome, idade, nascimento) values ('joao', null, null);
 insert into alunos (nome, idade, nascimento) values ('joao', 14, '2006-07-05');
-
 
 
 -- BETWEEN
