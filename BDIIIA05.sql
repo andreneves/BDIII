@@ -17,7 +17,7 @@ insert into alunos (nome, idade, nascimento) values ('joao', 14, '2006-07-05');
 
 -------------------
 
-Utilizando os dados acima
+-- Utilizando os dados acima
 
 -- Selecione todos os registros da tabela alunos
 
