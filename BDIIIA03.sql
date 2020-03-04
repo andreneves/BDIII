@@ -35,6 +35,6 @@ SELECT *
 FROM alunos
 WHERE nome LIKE 'joao'; 
 
--- curingas
+-- coringas
 -- % - representa qualquer numero ou multiplos caracteres
 -- _ - um único caracter
