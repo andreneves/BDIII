@@ -5,7 +5,7 @@ CREATE TABLE alunos (
 	id INT AUTO_INCREMENT primary key,
 	nome varchar (50),
 	idade int (3),
-    nascimento date DEFAULT NULL,
+    nascimento date DEFAULT NULL
 );
 
 -- insert
