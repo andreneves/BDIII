@@ -4,7 +4,7 @@ DROP DATABASE bd3;
 CREATE DATABASE bd3;
 
 USE bd3;
-DROP TABLE alunos;
+DROP TABLE IF EXISTS alunos;
 
 -- create table
 CREATE TABLE alunos (
