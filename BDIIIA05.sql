@@ -1,4 +1,4 @@
--- BDIIA05 - exercícios
+-- BDIIIA05 - exercícios
 
 DROP DATABASE bd3;
 CREATE DATABASE bd3;
