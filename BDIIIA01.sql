@@ -24,11 +24,11 @@ insert into alunos (nome, idade, nascimento) values ('joao', 14, '2006-07-05');
 -------------------
 
 
--- select
+-- Selecionar todos os campos de uma tabela
 select * 
 from alunos;
 
--- is null e is not null
+-- Filtrar o resultado por campos nulos e não nulos;
 select nome, idade 
 from alunos 
 where idade is null;
@@ -37,16 +37,16 @@ select nome, idade
 from alunos 
 where idade is not null; 
 
--- distinct
+-- Selecionar os registros ignorando os registros duplicados
 select distinct nome 
 from alunos;
 
--- order by
+-- Ordenar o resultado de uma consulta
 select * 
 from alunos 
 order by nome asc;
 
--- limit
+-- Limitar o número de registros retornado por uma consulta
 select * 
 from alunos 
 limit 3;
