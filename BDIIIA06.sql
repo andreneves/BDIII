@@ -4,7 +4,6 @@ DROP DATABASE bd3;
 CREATE DATABASE bd3;
 
 USE bd3;
-DROP TABLE IF EXISTS alunos;
 
 -- create table
 CREATE TABLE `categorias` (
@@ -36,11 +35,13 @@ insert into produtos (nome, valor, categoria_id) values ('mouse', 20, 2);
 insert into produtos (nome, valor, categoria_id) values ('mesa', 120, 3);
 insert into produtos (nome, valor, categoria_id) values ('cadeira', 80, 3);
 
--- 
+-- selecionar todos os dados da tabela categorias
 select * from categorias;
 
+-- selecionar todos os dados da tabela produtos
 select * from produtos;
 
+-- inner join das duas tabelas
 SELECT categorias.nome, produtos.nome, produtos.valor
 FROM produtos
 INNER JOIN categorias ON produtos.categoria_id = categorias.id;
