@@ -1,4 +1,4 @@
--- BDIIIA06
+-- BDIIIA07
 
 DROP DATABASE bd3;
 CREATE DATABASE bd3;
@@ -21,7 +21,7 @@ CREATE TABLE `alugueis` (
   PRIMARY KEY (`id`)
 );
 
--- insert categorias 
+-- insert 
 insert into vendas (nome, cidade) values ('venda 1', 'Rio de Janeiro');
 insert into vendas (nome, cidade) values ('venda 2', 'São Paulo');
 insert into vendas (nome, cidade) values ('venda 3', 'Rio de Janeiro');
@@ -29,6 +29,11 @@ insert into vendas (nome, cidade) values ('venda 3', 'Rio de Janeiro');
 insert into alugueis (nome, cidade) values ('aluguel 1', 'São Paulo');
 insert into alugueis (nome, cidade) values ('aluguel 2', 'Belo Horizonte');
 insert into alugueis (nome, cidade) values ('aluguel 3', 'Rio de Janeiro');
+
+-- select *
+SELECT * from vendas;
+
+SELECT * from alugueis;
 
 
 -- UNION
@@ -46,7 +51,7 @@ SELECT cidade from vendas
 UNION ALL
 SELECT cidade from alugueis;
 
--- UNION com  where
+-- UNION com  where, etc.
 SELECT cidade from vendas
 WHERE id >= 2
 UNION
