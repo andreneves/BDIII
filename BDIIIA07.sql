@@ -59,3 +59,11 @@ SELECT cidade from alugueis
 WHERE id >= 2
 ORDER BY cidade ASC;
 
+
+-- union com where, etc. exemplo com like
+select cidade from vendas
+where cidade LIKE '%nei%'
+union
+select cidade from alugueis
+where cidade LIKE '%nei%'
+order by cidade ASC;
