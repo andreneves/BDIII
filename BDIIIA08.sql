@@ -79,6 +79,10 @@ insert into vendas (nome, vendedor_id) values ('Venda 4', 2);
 insert into vendas (nome, vendedor_id) values ('Venda 5', 2);
 insert into vendas (nome, vendedor_id) values ('Venda 6', 3);
 
+-- select
+select * from vendedores;
+select * from vendas;
+
 -- Desejo ordenar os vendedores começando pelo com maior número de vendas
 SELECT vendedores.nome, COUNT(vendas.id) AS QuantidadeDeVendas FROM vendas
 INNER JOIN vendedores ON vendas.vendedor_id = vendedores.id
