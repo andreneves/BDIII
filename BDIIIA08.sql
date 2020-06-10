@@ -46,7 +46,7 @@ GROUP BY cidade;
 -- Ordenando de maior quantidade para menor - descrescente
 SELECT cidade, COUNT(id)
 FROM inscricoes
-GROUP BY cidade;
+GROUP BY cidade
 ORDER BY COUNT(id) DESC;
 
 
@@ -61,16 +61,29 @@ CREATE TABLE `vendas` (
   PRIMARY KEY (`id`)
 );
 
-CREATE TABLE `vendedor` (
+CREATE TABLE `vendedores` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
 );
 
+-- inserir dados
+insert into vendedores (nome) values ('André');
+insert into vendedores (nome) values ('Pedro');
+insert into vendedores (nome) values ('João');
 
-SELECT vendedor.nome, COUNT(vendas.id) AS QuantidadeDeVendas FROM vendas
-LEFT JOIN vendedor ON vendas.vendedor_id = vendedor.id
-GROUP BY vendedor.nome;
+insert into vendas (nome, vendedor_id) values ('Venda 1', 1);
+insert into vendas (nome, vendedor_id) values ('Venda 2', 1);
+insert into vendas (nome, vendedor_id) values ('Venda 3', 1);
+insert into vendas (nome, vendedor_id) values ('Venda 4', 2);
+insert into vendas (nome, vendedor_id) values ('Venda 5', 2);
+insert into vendas (nome, vendedor_id) values ('Venda 6', 3);
+
+-- Desejo ordenar os vendedores começando pelo com maior número de vendas
+SELECT vendedores.nome, COUNT(vendas.id) AS QuantidadeDeVendas FROM vendas
+INNER JOIN vendedores ON vendas.vendedor_id = vendedores.id
+GROUP BY vendedores.nome
+ORDER BY COUNT(vendas.id) desc;
 
 
 
