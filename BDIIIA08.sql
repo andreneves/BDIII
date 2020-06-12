@@ -24,7 +24,7 @@ insert into inscricoes (nome, cidade) values ('Graciela', 'Rio de Janeiro');
 insert into inscricoes (nome, cidade) values ('Renata', 'Vitória');
 insert into inscricoes (nome, cidade) values ('Leticia', 'Rio de Janeiro');
 insert into inscricoes (nome, cidade) values ('Milena', 'São Paulo');
-insert into inscricoes (nome, cidade) values ('Patrícia', 'São Paulo');
+insert into inscricoes (nome, cidade) values ('Patricia', 'São Paulo');
 
 
 
