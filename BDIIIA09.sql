@@ -27,11 +27,14 @@ insert into inscricoes (nome, idade, cidade) values ('Leticia', 25, 'Rio de Jane
 insert into inscricoes (nome, idade, cidade) values ('Milena', 26, 'São Paulo');
 insert into inscricoes (nome, idade, cidade) values ('Patricia', 27, 'São Paulo');
 
-
-
 -- select *
 SELECT * from inscricoes;
 
+-- Em um select simples utilizamos o where para filtrar os valores que estão na tabela
+-- exemplo:
+select * from inscricoes
+where
+idade >= 20;
 
 -- HAVING
 -- É uma condição baseada nas informações de agregação (group by).
