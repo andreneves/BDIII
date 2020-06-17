@@ -1,4 +1,4 @@
--- BDIIIA08
+-- BDIIIA09
 
 DROP DATABASE bd3;
 CREATE DATABASE bd3;
@@ -9,22 +9,23 @@ USE bd3;
 CREATE TABLE `inscricoes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(200) NOT NULL,
+  `idade` int(3) NOT NULL,
   `cidade` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
 );
 
 
 -- insert 
-insert into inscricoes (nome, cidade) values ('André', 'Rio de Janeiro');
-insert into inscricoes (nome, cidade) values ('Bruno', 'São Paulo');
-insert into inscricoes (nome, cidade) values ('David', 'Rio de Janeiro');
-insert into inscricoes (nome, cidade) values ('Wando', 'Recife');
-insert into inscricoes (nome, cidade) values ('Paula', 'Belo Horizonte');
-insert into inscricoes (nome, cidade) values ('Graciela', 'Rio de Janeiro');
-insert into inscricoes (nome, cidade) values ('Renata', 'Vitória');
-insert into inscricoes (nome, cidade) values ('Leticia', 'Rio de Janeiro');
-insert into inscricoes (nome, cidade) values ('Milena', 'São Paulo');
-insert into inscricoes (nome, cidade) values ('Patricia', 'São Paulo');
+insert into inscricoes (nome, idade, cidade) values ('André', 18, 'Rio de Janeiro');
+insert into inscricoes (nome, idade, cidade) values ('Bruno', 19, 'São Paulo');
+insert into inscricoes (nome, idade, cidade) values ('David', 20, 'Rio de Janeiro');
+insert into inscricoes (nome, idade, cidade) values ('Wando', 21, 'Recife');
+insert into inscricoes (nome, idade, cidade) values ('Paula', 22, 'Belo Horizonte');
+insert into inscricoes (nome, idade, cidade) values ('Graciela', 23, 'Rio de Janeiro');
+insert into inscricoes (nome, idade, cidade) values ('Renata', 24, 'Vitória');
+insert into inscricoes (nome, idade, cidade) values ('Leticia', 25, 'Rio de Janeiro');
+insert into inscricoes (nome, idade, cidade) values ('Milena', 26, 'São Paulo');
+insert into inscricoes (nome, idade, cidade) values ('Patricia', 27, 'São Paulo');
 
 
 
@@ -32,14 +33,15 @@ insert into inscricoes (nome, cidade) values ('Patricia', 'São Paulo');
 SELECT * from inscricoes;
 
 
-
--- GROUP BY
--- É uma instrução que agrupa linhas que têm os mesmos valores em um resumo.
+-- HAVING
+-- É uma condição baseada nas informações de agregação (group by).
+-- Tem função semelhante a do WHERE, mas é aplicada nas funções de agregação.
 -- Usada com funções de agregação como (COUNT, MAX, MIN, SUM, AVG).
--- Exemplo: Determinar a quantidade de inscritos por cidade.
+-- Exemplo: Determinar a quantidade de inscritos por cidade que tenham mais de um inscrito.
 SELECT cidade, COUNT(id)
 FROM inscricoes
-GROUP BY cidade;
+GROUP BY cidade
+HAVING count(id) >= 2;
 
 
 
@@ -47,6 +49,7 @@ GROUP BY cidade;
 SELECT cidade, COUNT(id)
 FROM inscricoes
 GROUP BY cidade
+HAVING count(id) >= 2
 ORDER BY COUNT(id) DESC;
 
 
@@ -87,6 +90,7 @@ select * from vendas;
 SELECT vendedores.nome, COUNT(vendas.id) AS QuantidadeDeVendas FROM vendas
 INNER JOIN vendedores ON vendas.vendedor_id = vendedores.id
 GROUP BY vendedores.nome
+HAVING COUNT(vendas.id) >= 2
 ORDER BY COUNT(vendas.id) desc;
 
 
