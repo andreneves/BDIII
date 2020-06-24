@@ -36,19 +36,19 @@ insert into solicitacoes (nome, data, cliente_id) values ('Monitor com defeito',
 insert into solicitacoes (nome, data, cliente_id) values ('Sumiu meu mouse', NOW(), 3);
 
 
-1) Crie um relatório que possua a quantidade de solicitações por usuários
-O relatório deve conter os seguintes campos: nome do cliente, quantidade de solicitacoes
+-- 1) Crie um relatório que possua a quantidade de solicitações por usuários
+-- O relatório deve conter os seguintes campos: nome do cliente, quantidade de solicitacoes
 
 
-2) Crie o relatório acima ordenando em ordem decrescente de solicitações
+-- 2) Crie o relatório acima ordenando em ordem decrescente de solicitações
 
 
-3) Quantos clientes o sistema tem por cidade
+-- 3) Quantos clientes o sistema tem por cidade
 
 
-4) Relatório de solicitações por cidade
+-- 4) Relatório de solicitações por cidade
 
 
-5) Relatório com todos os usuários que fizeram mais de uma solicitação
+-- 5) Relatório com todos os usuários que fizeram mais de uma solicitação
 
 
