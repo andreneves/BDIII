@@ -38,21 +38,37 @@ insert into solicitacoes (nome, data, cliente_id) values ('Sumiu meu mouse', NOW
 
 -- 1) Crie um relatório que possua a quantidade de solicitações por usuários
 -- O relatório deve conter os seguintes campos: nome do cliente, quantidade de solicitacoes
-
+select clientes.nome, count(solicitacoes.id)
+from clientes
+inner join solicitacoes on solicitacoes.cliente_id = clientes.id
+group by clientes.nome;
 
 
 -- 2) Crie o relatório acima ordenando em ordem decrescente de solicitações
-
+select clientes.nome, count(solicitacoes.id)
+from clientes
+inner join solicitacoes on solicitacoes.cliente_id = clientes.id
+group by clientes.nome
+order by count(solicitacoes.id) DESC;
 
 
 -- 3) Quantos clientes o sistema tem por cidade
-
+select cidade, count(id)
+from clientes
+group by cidade;
 
 
 -- 4) Relatório de solicitações por cidade
-
+select clientes.cidade, count(solicitacoes.id)
+from clientes
+inner join solicitacoes on solicitacoes.cliente_id = clientes.id
+group by clientes.cidade;
 
 
 -- 5) Relatório com todos os usuários que fizeram mais de uma solicitação
-
+select clientes.nome, count(solicitacoes.id)
+from clientes
+inner join solicitacoes on solicitacoes.cliente_id = clientes.id
+group by clientes.nome
+having count(solicitacoes.id) > 1;
 
