@@ -53,6 +53,6 @@ insert into solicitacoes (nome, data, cliente_id) values ('Sumiu meu mouse', NOW
 
 
 
--- 5) Relatório com todos os usuários que fizeram mais de uma solicitação
+-- 5) Relatório com todos os clientes que fizeram mais de uma solicitação
 
 

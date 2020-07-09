@@ -65,7 +65,7 @@ inner join solicitacoes on solicitacoes.cliente_id = clientes.id
 group by clientes.cidade;
 
 
--- 5) Relatório com todos os usuários que fizeram mais de uma solicitação
+-- 5) Relatório com todos os clientes que fizeram mais de uma solicitação
 select clientes.nome, count(solicitacoes.id)
 from clientes
 inner join solicitacoes on solicitacoes.cliente_id = clientes.id
