@@ -40,7 +40,7 @@ FROM alunos;
 -- LIKE
 SELECT *
 FROM alunos
-WHERE nome LIKE 'joao'; 
+WHERE nome LIKE '%joao%'; 
 
 -- coringas
 -- % - representa qualquer numero ou multiplos caracteres
