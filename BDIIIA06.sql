@@ -12,14 +12,12 @@ CREATE TABLE `categorias` (
   PRIMARY KEY (`id`)
 );
 
-CREATE TABLE `produtos` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(80) NOT NULL,
-  `valor` float NOT NULL,
-  `categoria_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `categoria_id` (`categoria_id`),
-  CONSTRAINT `produtos_ibfk_1` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`id`)
+create table produtos (
+	id int auto_increment primary key,
+    nome varchar(80) not null,
+    valor float not null,
+    categoria_id int not null,
+    foreign key (categoria_id) references categorias (id)
 );
 
 -- insert categorias 
