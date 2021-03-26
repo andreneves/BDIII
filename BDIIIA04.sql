@@ -23,6 +23,12 @@ insert into alunos (nome, idade, nascimento) values ('joao', null, null);
 insert into alunos (nome, idade, nascimento) values ('joao', 14, '2006-07-05');
 
 
+
+
+-- PAREI AQUI
+
+
+
 -- BETWEEN
 SELECT * FROM alunos
 WHERE idade BETWEEN 11 AND 13;

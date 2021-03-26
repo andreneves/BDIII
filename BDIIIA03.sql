@@ -5,6 +5,9 @@ CREATE DATABASE bd3;
 
 USE bd3;
 
+-- exibe todas as tabelas do banco de dados selecionado
+SHOW TABLES;
+
 -- DROP TABLE IF EXISTS alunos;
 
 -- create table
