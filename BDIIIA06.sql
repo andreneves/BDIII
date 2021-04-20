@@ -46,7 +46,7 @@ INNER JOIN categorias ON produtos.categoria_id = categorias.id;
 
 -- inner join usando alias
 SELECT categorias.nome AS 'categoria', 
-		   produtos.nome 	AS 'produto', 
-       produtos.valor
+    produtos.nome 	AS 'produto', 
+    produtos.valor
 FROM produtos
 inner join categorias ON produtos.categoria_id = categorias.id;
