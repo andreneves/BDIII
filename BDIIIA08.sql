@@ -51,6 +51,8 @@ ORDER BY COUNT(id) DESC;
 
 
 
+
+
 -- É possível ser utilizada com JOIN
 
 -- create table
