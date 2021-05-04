@@ -56,11 +56,10 @@ ORDER BY COUNT(id) DESC;
 -- É possível ser utilizada com JOIN
 
 -- create table
-CREATE TABLE `vendedores` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(200) NOT NULL,
-  PRIMARY KEY (`id`)
-);
+create table vendedores (
+	id int primary key auto_increment,
+    nome varchar(200)
+);1
 
 CREATE TABLE `vendas` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
