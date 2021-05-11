@@ -48,7 +48,6 @@ GROUP BY cidade
 HAVING count(id) >= 2;
 
 
-
 -- Ordenando de maior quantidade para menor - descrescente
 SELECT cidade, COUNT(id)
 FROM inscricoes
