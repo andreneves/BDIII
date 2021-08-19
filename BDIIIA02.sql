@@ -16,23 +16,37 @@ CREATE TABLE alunos (
 );
 
 -- insert
-insert into alunos (nome, idade, nascimento) values ('leo', 10, '2010-03-04');
-insert into alunos (nome, idade, nascimento) values ('juju', 11, '2009-10-08');
-insert into alunos (nome, idade, nascimento) values ('fred', 13, '2007-05-12');
+insert into alunos (nome, idade, nascimento) values ('leo', 10, '2011-03-04');
+insert into alunos (nome, idade, nascimento) values ('juju', 11, '2010-10-08');
+insert into alunos (nome, idade, nascimento) values ('fred', 13, '2008-05-12');
 insert into alunos (nome, idade, nascimento) values ('joao', null, null);
-insert into alunos (nome, idade, nascimento) values ('joao', 14, '2006-07-05');
+insert into alunos (nome, idade, nascimento) values ('joao', 14, '2007-07-05');
 
 
 select * from alunos;
 
 -- atualizar nome para Elias e idade para 40 do registro com id = 1
+/*
+UPDATE NomeDaTabela
+SET coluna1 = 'valor',
+coluna2 = 'valor'
+WHERE campo3 = 'valor';
+*/
+
 UPDATE alunos
 SET nome = "Elias", idade = 20
 WHERE id = 1;
 
 -- excluir o registro com id = 1 da tabela alunos
+/*
+DELETE FROM NomeDaTabela
+WHERE coluna = 'valor';
+*/
+
 DELETE FROM alunos 
 WHERE id = 1;
+
+-- operadores lógicos
 
 -- selecione os registro com nome de joao e idade igual a 14
 SELECT * FROM alunos
