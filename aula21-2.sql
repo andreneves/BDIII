@@ -204,6 +204,69 @@ where nome like '%Reis%';
 select * from alunos
 where nome like '%a%';
 
+
+select * from solicitacoes
+where protocolo like '___20210822%';
+
+select * from solicitacoes
+where protocolo like '%20210822%';
+
+/*
+'Estou reclamando pelo motivo da minha solicitacao número SOL20210822RRRRR
+não ter sido respondida. Abri uma reclamacao na ouvidoria de número 
+OUV20210822RRRRR...'
+*/
+
+-- XXXAAAAMMDDRRRRRR
+/*
+exemplo
+SOL20210822RRRRR
+OUV20210822RRRRR
+FAL20210822RRRRR
+*/
+
 -- coringas
 -- % - representa qualquer número de caracteres
 -- _ - um único caracter
+
+
+-- --------------------------------------------------------
+
+-- aula 4
+
+CREATE TABLE cores (
+	id int auto_increment PRIMARY KEY,
+	nome varchar(25) not null,
+    rgba varchar(25) not null,
+    hexadecimal varchar(6) not null,
+    luminosidade int(3),
+    data_criacao date
+);
+
+insert into cores (nome, rgba, hexadecimal, luminosidade, data_criacao)
+values ('Amarelo', '300 345 367 0', 'f7c707', 90, '2021-08-22');
+insert into cores (nome, rgba, hexadecimal, luminosidade, data_criacao)
+values ('Vermelho', '310 345 255 7', 'c7f707', 10, '2021-08-23');
+insert into cores (nome, rgba, hexadecimal, luminosidade, data_criacao)
+values ('Branco', '255 255 255 0', 'ffffff', 70, '2021-08-24');
+insert into cores (nome, rgba, hexadecimal, luminosidade, data_criacao)
+values ('Amarelo2', '300 345 367 0', 'f7c707', 50, '2021-08-25');
+insert into cores (nome, rgba, hexadecimal, luminosidade, data_criacao)
+values ('Preto', '000 000 000 0', '000000', 100, '2021-08-26');
+
+
+-- Filtrando com between 
+SELECT * FROM cores
+where luminosidade BETWEEN 10 and 30;
+
+-- negação do between na luminosidade
+SELECT * FROM cores
+where luminosidade not BETWEEN 10 and 30;
+
+
+SELECT * FROM cores
+where data_criacao BETWEEN '2021-08-22' and '2021-08-25';
+
+-- negação do between na data_criacao
+SELECT * FROM cores
+where data_criacao not BETWEEN '2021-08-22' and '2021-08-25';

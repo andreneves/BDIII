@@ -23,12 +23,6 @@ insert into alunos (nome, idade, nascimento) values ('joao', null, null);
 insert into alunos (nome, idade, nascimento) values ('joao', 14, '2006-07-05');
 
 
-
-
--- PAREI AQUI
-
-
-
 -- BETWEEN
 SELECT * FROM alunos
 WHERE idade BETWEEN 11 AND 13;
@@ -42,6 +36,8 @@ WHERE idade NOT BETWEEN 11 AND 13;
 SELECT * FROM alunos
 WHERE nascimento BETWEEN '2007-05-12' AND '2010-03-04';
 
+
+AQUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 
 -- ALIAS COLUMN
 SELECT nome AS nome_cliente
