@@ -71,7 +71,7 @@ insert into alunos (nome, idade, nascimento) values ('joao', 14, '2007-07-05');
 -- 15) Selecione os registro com idade fora da faixa de 10 e 12 anos
 
 
--- 16) Selecione os alunos com data de nascimento entre '2007-05-12' e '2010-03-04'
+-- 16) Selecione os alunos com data de nascimento entre '2008-05-12' e '2011-03-04'
 
 
 -- 17) Retorne o nome usando o alias nome_do_cliente
