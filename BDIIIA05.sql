@@ -44,7 +44,7 @@ insert into alunos (nome, idade, nascimento) values ('joao', 14, '2007-07-05');
 -- 6) Exclua o registro com id = 3
 
 
--- 7) Selecione os registros que tenham o nome = 'Samuel' ou idade = 10
+-- 7) Selecione os registros que tenham o nome = 'Samuel' ou idade = 14
 
 
 -- 8) Selecione os registros que tenham o nome = 'joao' e idade = 14
