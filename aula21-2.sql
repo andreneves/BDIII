@@ -270,3 +270,16 @@ where data_criacao BETWEEN '2021-08-22' and '2021-08-25';
 -- negação do between na data_criacao
 SELECT * FROM cores
 where data_criacao not BETWEEN '2021-08-22' and '2021-08-25';
+
+
+-- ALIAS
+SELECT nome AS 'nome_da_cor'
+FROM cores;
+
+-- ALIAS TABLE
+SELECT *
+FROM alunos AS a; 
+
+
+
+
