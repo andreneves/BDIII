@@ -6,18 +6,17 @@ CREATE DATABASE bd3;
 USE bd3;
 
 -- create table
-CREATE TABLE `categorias` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(200) NOT NULL,
-  PRIMARY KEY (`id`)
+create table categorias (
+	id int(11) primary key auto_increment,
+    nome varchar(200) not null
 );
 
 create table produtos (
-	id int auto_increment primary key,
-    nome varchar(80) not null,
-    valor float not null,
-    categoria_id int not null,
-    foreign key (categoria_id) references categorias (id)
+  id int(11) primary key auto_increment,
+  nome varchar(200) not null,
+  valor float,
+  categoria_id int(11),
+	foreign key (categoria_id) references categorias(id)
 );
 
 -- insert categorias 

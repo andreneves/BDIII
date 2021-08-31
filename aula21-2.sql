@@ -282,4 +282,31 @@ FROM alunos AS a;
 
 
 
+create table categorias (
+	id int(11) primary key auto_increment,
+    nome varchar(200) not null
+);
+
+create table produtos (
+	id int(11) primary key auto_increment,
+    nome varchar(200) not null,
+    valor float,
+    categoria_id int(11),
+	foreign key (categoria_id) references categorias(id)
+);
+
+show columns from produtos;
+
+
+insert into categorias (nome) values ('eletronicos');
+insert into categorias (nome) values ('informatica');
+insert into categorias (nome) values ('escritorio');
+
+
+insert into produtos (nome, valor, categoria_id) values ('microondas', 100, 1);
+insert into produtos (nome, valor, categoria_id) values ('forno eletrico', 200, 1);
+insert into produtos (nome, valor, categoria_id) values ('teclado', 50, 2);
+insert into produtos (nome, valor, categoria_id) values ('mouse', 20, 2);
+insert into produtos (nome, valor, categoria_id) values ('mesa', 120, 3);
+insert into produtos (nome, valor, categoria_id) values ('cadeira', 80, 3);
 
