@@ -280,7 +280,7 @@ FROM cores;
 SELECT *
 FROM alunos AS a; 
 
-
+-- INNER JOIN
 
 create table categorias (
 	id int(11) primary key auto_increment,
@@ -297,6 +297,7 @@ create table produtos (
 
 show columns from produtos;
 
+select * from produtos;
 
 insert into categorias (nome) values ('eletronicos');
 insert into categorias (nome) values ('informatica');
@@ -310,3 +311,36 @@ insert into produtos (nome, valor, categoria_id) values ('mouse', 20, 2);
 insert into produtos (nome, valor, categoria_id) values ('mesa', 120, 3);
 insert into produtos (nome, valor, categoria_id) values ('cadeira', 80, 3);
 
+-- fazer uma tabela de preços contendo o nome da categoria, 
+-- nome do produto e valor
+
+SELECT 
+	categorias.nome,
+    produtos.nome,
+    produtos.valor
+FROM produtos
+INNER JOIN categorias ON produtos.categoria_id = categorias.id;
+
+-- ALIAS
+SELECT 
+	categorias.nome AS 'categoria',
+    produtos.nome 	AS 'produto',
+    produtos.valor 	AS 'valor'
+FROM produtos
+INNER JOIN categorias ON produtos.categoria_id = categorias.id;
+
+-- Atividade
+-- Construir três tabelas
+-- produtos
+- id (pk)
+- nome
+- valor
+
+-- vendas
+- id (pk)
+- nomeCliente
+
+-- venda_produto
+- id (pk)
+- venda_id (fk)
+- produto_id (fk)
