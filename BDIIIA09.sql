@@ -7,12 +7,11 @@ CREATE DATABASE bd3;
 USE bd3;
 
 -- create table
-CREATE TABLE `inscricoes` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(200) NOT NULL,
-  `idade` int(3) NOT NULL,
-  `cidade` varchar(200) NOT NULL,
-  PRIMARY KEY (`id`)
+create table inscricoes (
+    id int primary key auto_increment,
+    nome varchar(200) not null,
+    idade int(3) not null,
+    cidade varchar(100) not null
 );
 
 
@@ -34,8 +33,7 @@ SELECT * from inscricoes;
 -- Em um select simples utilizamos o where para filtrar os valores que estão na tabela
 -- exemplo:
 select * from inscricoes
-where
-idade >= 20;
+where idade >= 20;
 
 -- HAVING
 -- É uma condição baseada nas informações de agregação (group by).
@@ -58,17 +56,15 @@ ORDER BY COUNT(id) DESC;
 -- É possível ser utilizada com JOIN
 
 -- create table
-CREATE TABLE `vendedores` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(200) NOT NULL,
-  PRIMARY KEY (`id`)
+CREATE TABLE vendedores (
+  id int primary key auto_increment,
+  nome varchar(200) NOT NULL
 );
 
-CREATE TABLE `vendas` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(200) NOT NULL,
-  `vendedor_id` int(11),
-  PRIMARY KEY (`id`),
+CREATE TABLE vendas (
+  id int primary key auto_increment,
+  nome varchar(200) NOT NULL,
+  vendedor_id int(11),
   FOREIGN KEY (vendedor_id) REFERENCES vendedores(id)
 );
 
@@ -88,11 +84,12 @@ insert into vendas (nome, vendedor_id) values ('Venda 6', 3);
 select * from vendedores;
 select * from vendas;
 
--- Desejo ordenar os vendedores começando pelo com maior número de vendas
+-- Desejo ordenar os vendedores começando pelo com maior número de vendas 
+-- e que tenham vendido mais do que dois itens
 SELECT vendedores.nome, COUNT(vendas.id) AS QuantidadeDeVendas FROM vendas
 INNER JOIN vendedores ON vendas.vendedor_id = vendedores.id
 GROUP BY vendedores.nome
-HAVING COUNT(vendas.id) >= 2
+HAVING COUNT(vendas.id) > 2
 ORDER BY COUNT(vendas.id) desc;
 
 
@@ -100,3 +97,4 @@ ORDER BY COUNT(vendas.id) desc;
 
 
 
+bg

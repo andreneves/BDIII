@@ -329,6 +329,7 @@ SELECT
 FROM produtos
 INNER JOIN categorias ON produtos.categoria_id = categorias.id;
 
+/*
 -- Atividade
 -- Construir três tabelas
 -- produtos
@@ -344,3 +345,83 @@ INNER JOIN categorias ON produtos.categoria_id = categorias.id;
 - id (pk)
 - venda_id (fk)
 - produto_id (fk)
+*/
+
+
+CREATE DATABASE bd3;
+
+use bd3;
+
+
+create table inscricoes (
+	id int primary key auto_increment,
+    nome varchar(200) not null,
+    idade int(3) not null,
+    cidade varchar(100) not null
+);
+
+insert into inscricoes (nome, idade, cidade) 
+values ('Anderson', 18, 'Rio de Janeiro');
+insert into inscricoes (nome, idade, cidade) 
+values ('Augusto', 19, 'São Paulo');
+insert into inscricoes (nome, idade, cidade) 
+values ('Beatriz', 17, 'Rio de Janeiro');
+
+insert into inscricoes (nome, idade, cidade) 
+values ('Carlos', 20, 'Vitória');
+insert into inscricoes (nome, idade, cidade) 
+values ('Evanilson', 22, 'Belo Horizonte');
+insert into inscricoes (nome, idade, cidade) 
+values ('Gabriel', 21, 'Rio de Janeiro');
+
+insert into inscricoes (nome, idade, cidade) 
+values ('Lino', 20, 'Rio de Janeiro');
+insert into inscricoes (nome, idade, cidade) 
+values ('Luiz Antonio', 23, 'Recife');
+insert into inscricoes (nome, idade, cidade) 
+values ('Luiz Henrique', 19, 'São Paulo');
+
+select * from inscricoes;
+
+select * from inscricoes
+where idade >= 20;
+
+-- numero de inscritos por cidade e que tenham mais de um inscrito
+SELECT cidade, count(id)
+FROM inscricoes
+GROUP BY cidade
+HAVING count(id) > 1;
+
+insert into vendedores (nome) values ('vendor1');
+insert into vendedores (nome) values ('vendor2');
+insert into vendedores (nome) values ('vendor3');
+
+insert into vendas (nome, vendedor_id) values ('venda1', 1);
+insert into vendas (nome, vendedor_id) values ('venda2', 2);
+insert into vendas (nome, vendedor_id) values ('venda3', 3);
+insert into vendas (nome, vendedor_id) values ('venda4', 3);
+insert into vendas (nome, vendedor_id) values ('venda5', 3);
+insert into vendas (nome, vendedor_id) values ('venda6', 2);
+insert into vendas (nome, vendedor_id) values ('venda7', 2);
+insert into vendas (nome, vendedor_id) values ('venda8', 1);
+insert into vendas (nome, vendedor_id) values ('venda9', 2);
+
+-- Desejo ordenar os vendedores começando pelo com maior número de vendas 
+-- e que tenham vendido mais do que um item
+
+select vendedores.nome, count(vendas.id) as quantidadeDeVendas
+from vendedores
+inner join vendas on vendas.vendedor_id = vendedores.id
+group by vendedores.nome
+order by count(vendas.id) DESC;
+
+-- Desejo ordenar os vendedores começando pelo com maior número de vendas 
+-- e que tenham vendido mais do que dois itens
+
+select vendedores.nome, count(vendas.id) as quantidadeDeVendas
+from vendedores
+inner join vendas on vendas.vendedor_id = vendedores.id
+group by vendedores.nome
+HAVING count(vendas.id) > 2
+order by count(vendas.id) DESC;
+
