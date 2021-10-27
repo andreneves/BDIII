@@ -92,9 +92,3 @@ GROUP BY vendedores.nome
 HAVING COUNT(vendas.id) > 2
 ORDER BY COUNT(vendas.id) desc;
 
-
-
-
-
-
-bg
