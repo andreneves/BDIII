@@ -50,3 +50,19 @@ select distinct nome, idade
 from alunos;
 
 
+-- ordenar os alunos por nome
+select * 
+from alunos
+order by nome ASC;
+
+-- selecione os alunos com
+-- idade acima de 21
+-- os dois mais velhos
+select * 
+from alunos
+where
+idade > 21
+order by idade DESC
+limit 2;
+
+-- 
