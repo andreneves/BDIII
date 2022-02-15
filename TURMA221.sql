@@ -65,4 +65,27 @@ idade > 21
 order by idade DESC
 limit 2;
 
--- 
+-- alter table alunos drop column nota;
+
+alter table alunos
+add column nota int after idade;
+
+update alunos set nota = 95 where id = 1;
+update alunos set nota = 87 where id = 2;
+update alunos set nota = 70 where id = 3;
+update alunos set nota = 65 where id = 4;
+update alunos set nota = 48 where id = 5;
+update alunos set nota = 76 where id = 6;
+update alunos set nota = 98 where id = 7;
+
+-- selecione todos os alunos que:
+-- tenham nota maior ou igual a 70
+-- ordenação decrescente por idade
+-- limitado a 3 alunos
+
+select * 
+from alunos
+where nota >= 70
+order by idade DESC
+limit 3;
+
