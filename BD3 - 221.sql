@@ -89,3 +89,92 @@ where nota >= 70
 order by idade DESC
 limit 3;
 
+-- --------------------------------------------
+
+select * from alunos;
+
+-- atualizar informacoes de um registro
+update alunos
+set 
+idade = 100, 
+nascimento = '1922-02-17'
+where
+id = 5;
+
+-- select * from alunos
+-- where
+-- id = 5;
+
+-- excluir um registro
+
+delete from alunos
+where id  = 5;
+
+-- operadores lógicos AND / OR
+
+-- selecione todos os registros que tenham o nome igual a 'André Neves'
+-- e idade igual a 100
+
+select * from alunos
+where
+nome = 'André Neves'
+AND
+idade = 100;
+
+-- selecion todos os registros que tenham o nome igual a 'Victor' 
+-- ou idade igual a 22 anos
+
+select * from alunos
+where
+nome = 'Victor'
+OR
+idade = 22;
+
+-- para saber o valor do auto_increment
+SELECT AUTO_INCREMENT FROM information_schema.tables
+WHERE table_name = 'alunos' AND table_schema = 'bd3';
+
+-- negacao
+-- selecionar todos os registros que não tenham 'Victor' no nome
+select * from alunos
+where not nome = 'Victor';
+
+
+-- Funções no SGBD
+
+select * from alunos;
+
+
+-- contar as ocorrências de idade
+select count(idade)
+from alunos;
+
+-- Pegar a média das idade
+select AVG(idade)
+from alunos;
+
+-- soma
+select SUM(idade)
+from alunos;
+
+-- menor idade
+select MIN(idade)
+from alunos;
+
+-- maior idade
+select MAX(idade)
+from alunos;
+
+
+-- procurar uma string dentro de um campo texto
+
+-- 'Os pokemons salvaram o mundo'
+
+-- 'pokemon'
+
+select * from alunos
+where
+nome like '%i%';
+
+-- Caracter curinga %
+
