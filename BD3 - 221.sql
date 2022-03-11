@@ -277,3 +277,6 @@ nascimento between '2008-05-12' and '2011-03-04';
 -- 17) Retorne o nome usando o alias nome_do_cliente
 select nome AS nome_do_cliente
 from alunos
+
+
+-- -----------------------------------
