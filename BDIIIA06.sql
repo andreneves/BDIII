@@ -51,3 +51,5 @@ SELECT categorias.nome AS 'categoria',
     produtos.valor
 FROM produtos
 inner join categorias ON produtos.categoria_id = categorias.id;
+
+
