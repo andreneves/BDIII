@@ -100,7 +100,7 @@ insert into aluno_turma (aluno_id, turma_id) values (3, 3);
 insert into aluno_turma (aluno_id, turma_id) values (4, 2);
 insert into aluno_turma (aluno_id, turma_id) values (5, 1);
 
--- 1) Retornar todos os alunos to turno 'noite'
+-- 1) Retornar todos os alunos do turno 'noite'
 
 
 
