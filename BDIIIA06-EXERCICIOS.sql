@@ -112,6 +112,6 @@ insert into aluno_turma (aluno_id, turma_id) values (5, 1);
 
 
 
--- 4) Retornar todas as turmas dos alunos que tenham nascido depois de 2021
+-- 4) Retornar todas as turmas dos alunos que tenham nascido depois de 2001
 
 
