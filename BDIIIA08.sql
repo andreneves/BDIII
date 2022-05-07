@@ -85,7 +85,7 @@ insert into vendas (nome, vendedor_id) values ('Venda 6', 3);
 select * from vendedores;
 select * from vendas;
 
-AQUIII
+AQUIIIII
 
 -- Desejo ordenar os vendedores começando pelo com maior número de vendas
 SELECT vendedores.nome, COUNT(vendas.id) AS QuantidadeDeVendas FROM vendas
