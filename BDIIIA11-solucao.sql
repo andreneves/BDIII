@@ -1,5 +1,6 @@
 -- BDIIIA11 - exercícios
 
+
 DROP DATABASE bd3;
 CREATE DATABASE bd3;
 
