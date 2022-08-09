@@ -16,3 +16,4 @@ insert into alunos (nome, nascimento) values ('fred', '2008-05-12');
 insert into alunos (nome, nascimento) values ('joao', null);
 insert into alunos (nome, nascimento) values ('joao', '2007-07-05');
 
+TESTE
