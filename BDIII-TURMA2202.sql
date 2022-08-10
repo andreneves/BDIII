@@ -16,4 +16,23 @@ insert into alunos (nome, nascimento) values ('fred', '2008-05-12');
 insert into alunos (nome, nascimento) values ('joao', null);
 insert into alunos (nome, nascimento) values ('joao', '2007-07-05');
 
-OTIMO
+-- selecionar todos os registros
+select * from alunos;
+
+-- somente nome
+select nome, nascimento from alunos;
+
+-- com filtro
+select nascimento from alunos
+where nome = 'joao'
+AND
+nascimento is not null;
+
+-- filtrar os resultados que tenha o campo nascimento nulo
+select * from alunos
+where nascimento is null;
+
+-- selecione a lista de todos os nomes sem repeticao
+select distinct nome
+from alunos;
+
