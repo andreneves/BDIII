@@ -36,3 +36,15 @@ where nascimento is null;
 select distinct nome
 from alunos;
 
+
+-- lista de presenca - ordenada em ordem alfabetica
+select * from alunos
+order by nome asc;
+
+select * from alunos
+order by nascimento desc;
+
+-- listar somente dois alunos
+select * from alunos
+limit 2;
+
