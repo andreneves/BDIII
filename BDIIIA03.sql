@@ -34,20 +34,24 @@ FROM alunos;
 -- WHERE condicao;
 
 -- AVG
+-- Média dos valores não null
 SELECT AVG(idade)
 FROM alunos;
 -- WHERE condicao;
 
 -- SUM
+-- Soma dos valores não null
 SELECT SUM(idade)
 FROM alunos;
 -- WHERE condicao; 
 
 -- MIN
+-- Menor valor
 SELECT MIN(idade)
 FROM alunos;
 
 -- MAX
+-- -- Maior valor
 SELECT MAX(idade)
 FROM alunos;
 
