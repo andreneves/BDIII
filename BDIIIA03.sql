@@ -61,7 +61,7 @@ FROM alunos
 WHERE nome LIKE '%joao%'; 
 
 
--- para teste
+-- para teste 
 
 insert into alunos (nome, idade, nascimento) 
 values ('André Neves dos Reis', 10, '2011-03-04');
