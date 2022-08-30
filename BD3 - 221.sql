@@ -9,5 +9,11 @@ create table vendas (
 
 insert into vendas (produto, quantidade, data_venda) 
 values ('Audi TT', 2, '2022-06-10');
-
-
+insert into vendas (produto, quantidade, data_venda) 
+values ('BMW', 3, '2022-05-01');
+insert into vendas (produto, quantidade, data_venda) 
+values ('Ferrari', 10, '2022-07-12');
+insert into vendas (produto, quantidade, data_venda) 
+values ('Masserati', 1, '2022-08-22');
+insert into vendas (produto, quantidade, data_venda) 
+values ('Bentley', 4, '2022-08-30');
