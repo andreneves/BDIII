@@ -17,3 +17,8 @@ insert into vendas (produto, quantidade, data_venda)
 values ('Masserati', 1, '2022-08-22');
 insert into vendas (produto, quantidade, data_venda) 
 values ('Bentley', 4, '2022-08-30');
+
+
+select * from vendas
+where 
+quantidade between 3 and 9;
