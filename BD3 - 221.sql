@@ -25,3 +25,8 @@ quantidade between 3 and 9;
 
 select * from vendas
 where data_venda between '2022-06-01' and '2022-08-25';
+
+-- não funciona corretamente devido a mecanismos internos do SGBD - pesquisar motivo
+select * from vendas
+where produto between 'BMW' and 'Ferrari';
+
