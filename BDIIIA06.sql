@@ -9,16 +9,16 @@ USE bd3;
 
 -- create table
 create table categorias (
-	id int(11) primary key auto_increment,
+    id int(11) primary key auto_increment,
     nome varchar(200) not null
 );
 
 create table produtos (
-  id int(11) primary key auto_increment,
-  nome varchar(200) not null,
-  valor float,
-  categoria_id int(11),
-	foreign key (categoria_id) references categorias(id)
+    id int(11) primary key auto_increment,
+    nome varchar(200) not null,
+    valor float,
+    categoria_id int(11),
+	  foreign key (categoria_id) references categorias(id)
 );
 
 -- insert categorias 
@@ -46,10 +46,10 @@ FROM produtos
 INNER JOIN categorias ON produtos.categoria_id = categorias.id;
 
 -- inner join usando alias
-SELECT categorias.nome AS 'categoria', 
-    produtos.nome 	AS 'produto', 
-    produtos.valor
-FROM produtos
-inner join categorias ON produtos.categoria_id = categorias.id;
+SELECT  c.nome  AS 'categoria', 
+        p.nome 	AS 'produto', 
+        p.valor
+FROM produtos p
+inner join categorias c ON p.categoria_id = c.id;
 
 
