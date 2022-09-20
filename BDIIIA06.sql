@@ -52,4 +52,34 @@ SELECT  c.nome  AS 'categoria',
 FROM produtos p
 inner join categorias c ON p.categoria_id = c.id;
 
+-- Criando mais uma tabela para fazer o INNER JOIN com três tabelas
+CREATE TABLE vendas (
+	id INT(11) PRIMARY KEY AUTO_INCREMENT,
+    nota_fiscal CHAR(8),
+    data DATE,
+    produto_id INT(11),
+    FOREIGN KEY (produto_id) REFERENCES produtos(id)
+);
 
+INSERT INTO vendas (nota_fiscal, data, produto_id) VAlUES ('0001', '2022-09-13', '1');
+INSERT INTO vendas (nota_fiscal, data, produto_id) VAlUES ('0002', '2022-09-13', '2');
+INSERT INTO vendas (nota_fiscal, data, produto_id) VAlUES ('0003', '2022-09-12', '3');
+INSERT INTO vendas (nota_fiscal, data, produto_id) VAlUES ('0004', '2022-09-11', '1');
+INSERT INTO vendas (nota_fiscal, data, produto_id) VAlUES ('0005', '2022-09-11', '5');
+INSERT INTO vendas (nota_fiscal, data, produto_id) VAlUES ('0006', '2022-09-11', '6');
+INSERT INTO vendas (nota_fiscal, data, produto_id) VAlUES ('0007', '2022-09-13', '4');
+
+
+
+-- inner join das três tabelas
+-- Proposição: Fazer uma consulta que resulte o nome da categoria, o nome do produto,
+-- o número da nota fiscal, a data e o valor do produto.
+
+SELECT  c.nome  AS 'categoria', 
+        p.nome 	AS 'produto', 
+        v.nota_fiscal, 
+        v.data, 
+        p.valor
+FROM produtos p
+inner join categorias c ON p.categoria_id = c.id
+inner join vendas v ON v.produto_id = p.id;
