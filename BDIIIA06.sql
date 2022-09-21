@@ -83,3 +83,50 @@ SELECT  c.nome  AS 'categoria',
 FROM produtos p
 inner join categorias c ON p.categoria_id = c.id
 inner join vendas v ON v.produto_id = p.id;
+
+
+-- SUBQUERY
+-- https://dev.mysql.com/doc/refman/8.0/en/subqueries.html
+-- É uma subconsulta é uma consulta SQL aninhada dentro de uma consulta maior
+-- As principais vantagens das subconsultas são:
+-- Eles permitem consultas estruturadas para que seja possível isolar cada parte de uma instrução.
+-- Eles fornecem maneiras alternativas de realizar operações que, de outra forma, exigiriam junções e uniões complexas.
+-- Muitas pessoas acham as subconsultas mais legíveis do que junções ou uniões complexas. De fato, foi a inovação das subconsultas que deu às pessoas a ideia original de chamar o SQL inicial de “ Linguagem de Consulta Estruturada”. ”
+
+create table empregados (
+    id int(11) primary key auto_increment,
+    nome varchar(255) not null,
+    departamento_codigo char(2) not null
+);
+
+insert into empregados (nome, departamento_codigo) values ('andre', 'TI');
+insert into empregados (nome, departamento_codigo) values ('bruno', 'RH');
+insert into empregados (nome, departamento_codigo) values ('cris', 'TI');
+insert into empregados (nome, departamento_codigo) values ('lorayne', 'RH');
+insert into empregados (nome, departamento_codigo) values ('daniele', 'TI');
+insert into empregados (nome, departamento_codigo) values ('daniel', 'CO');
+insert into empregados (nome, departamento_codigo) values ('claudiana', 'TI');
+insert into empregados (nome, departamento_codigo) values ('iago', 'CO');
+
+
+create table departamentos (
+    id int(11) primary key auto_increment,
+    nome varchar(255) not null,
+    codigo char(2) not null,
+    estado char(2) not null
+);
+
+insert into departamentos (nome, codigo, estado) values ('Tecnologia da Informação', 'TI', 'RJ');
+insert into departamentos (nome, codigo, estado) values ('Recursos Humanos', 'RH', 'SP');
+insert into departamentos (nome, codigo, estado) values ('Contabilidade', 'CO', 'SP');
+
+-- Proposição: Recuperar todos os empregados de departamentos que sejam de 'SP'
+
+select * from empregados
+where departamento_codigo IN (
+    select codigo from departamentos where estado = 'SP'
+);
+
+
+
+
