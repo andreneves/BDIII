@@ -60,3 +60,9 @@ WHERE nome='joao' OR idade=10;
 SELECT * FROM alunos
 WHERE NOT nome='joao';
 
+-- selecionar todos os registros dos ids passados como parâmetro
+SELECT * FROM alunos
+WHERE id IN (
+2,
+3
+);
