@@ -48,3 +48,7 @@ order by nascimento desc;
 select * from alunos
 limit 2;
 
+
+UNION 
+
+group by
