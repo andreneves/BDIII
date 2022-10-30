@@ -45,3 +45,11 @@ FROM alunos;
 -- ALIAS TABLE
 SELECT *
 FROM alunos AS a; 
+
+
+-- WHERE IN
+-- Retorna todos os registros com referência dentro da listagem
+SELECT * FROM alunos
+WHERE nome IN ('leo', 'juju', 'fred');
+
+
