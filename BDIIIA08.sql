@@ -6,11 +6,11 @@ CREATE DATABASE bd3;
 USE bd3;
 
 -- create table
-CREATE TABLE `inscricoes` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(200) NOT NULL,
-  `cidade` varchar(200) NOT NULL,
-  PRIMARY KEY (`id`)
+CREATE TABLE inscricoes (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  nome varchar(200) NOT NULL,
+  cidade varchar(200) NOT NULL,
+  PRIMARY KEY (id)
 );
 
 
